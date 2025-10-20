@@ -1,0 +1,173 @@
+import type { Mission, CommunityUpdate, Statistics, Donation } from "./types"
+
+export const mockStatistics: Statistics = {
+  activeMissions: 24,
+  peopleHelped: 1847,
+  donationsReceived: 342,
+  volunteersActive: 156,
+}
+
+export const mockMissions: Mission[] = [
+  {
+    id: "1",
+    title: "Emergency Food Distribution - Barangay San Roque",
+    location: "San Roque, Quezon City",
+    description:
+      "Urgent need for volunteers to help distribute food packages to 200 families affected by recent flooding.",
+    peopleNeeded: 15,
+    currentVolunteers: 8,
+    status: "urgent",
+    createdBy: "QC LGU",
+    createdAt: new Date("2025-01-10"),
+    category: "food",
+    coordinates: { lat: 14.676, lng: 121.0437 },
+  },
+  {
+    id: "2",
+    title: "Medical Supply Drive - Tondo Health Center",
+    location: "Tondo, Manila",
+    description:
+      "Collecting and organizing medical supplies for the community health center. Need volunteers with medical background preferred.",
+    peopleNeeded: 10,
+    currentVolunteers: 7,
+    status: "active",
+    createdBy: "Manila Health Office",
+    createdAt: new Date("2025-01-12"),
+    category: "medical",
+    coordinates: { lat: 14.6198, lng: 120.9742 },
+  },
+  {
+    id: "3",
+    title: "Temporary Shelter Setup - Marikina",
+    location: "Marikina City",
+    description:
+      "Setting up temporary shelters for families displaced by typhoon. Need volunteers for construction and logistics.",
+    peopleNeeded: 20,
+    currentVolunteers: 12,
+    status: "active",
+    createdBy: "Marikina DRRMO",
+    createdAt: new Date("2025-01-11"),
+    category: "shelter",
+    coordinates: { lat: 14.6507, lng: 121.1029 },
+  },
+  {
+    id: "4",
+    title: "School Supplies for Affected Students",
+    location: "Pasig City",
+    description:
+      "Collecting and distributing school supplies to students whose materials were damaged in recent calamity.",
+    peopleNeeded: 8,
+    currentVolunteers: 8,
+    status: "completed",
+    createdBy: "DepEd Pasig",
+    createdAt: new Date("2025-01-08"),
+    category: "supplies",
+    coordinates: { lat: 14.5764, lng: 121.0851 },
+  },
+  {
+    id: "5",
+    title: "Clean Water Distribution - Payatas",
+    location: "Payatas, Quezon City",
+    description: "Distributing clean drinking water to affected communities. Heavy lifting required.",
+    peopleNeeded: 12,
+    currentVolunteers: 5,
+    status: "urgent",
+    createdBy: "QC Water District",
+    createdAt: new Date("2025-01-13"),
+    category: "supplies",
+    coordinates: { lat: 14.7167, lng: 121.0833 },
+  },
+]
+
+export const mockUpdates: CommunityUpdate[] = [
+  {
+    id: "1",
+    title: "Successfully Distributed 500 Food Packs",
+    content:
+      "Thanks to our amazing volunteers, we successfully distributed 500 food packs to families in Barangay Commonwealth. Your support makes a difference!",
+    author: "ResQ Team",
+    createdAt: new Date("2025-01-14"),
+    type: "success",
+  },
+  {
+    id: "2",
+    title: "Urgent: Typhoon Warning for Metro Manila",
+    content:
+      "PAGASA has issued a typhoon warning. All active missions will be temporarily suspended. Please stay safe and follow LGU advisories.",
+    author: "ResQ Admin",
+    createdAt: new Date("2025-01-14"),
+    type: "urgent",
+  },
+  {
+    id: "3",
+    title: "New Partnership with Philippine Red Cross",
+    content:
+      "We are excited to announce our partnership with the Philippine Red Cross to expand our disaster relief efforts across the country.",
+    author: "ResQ Team",
+    createdAt: new Date("2025-01-13"),
+    type: "announcement",
+  },
+  {
+    id: "4",
+    title: "Medical Mission Completed in Tondo",
+    content:
+      "Our medical team successfully provided free check-ups and medicines to 300+ residents. Thank you to all the volunteer doctors and nurses!",
+    author: "Manila Health Office",
+    createdAt: new Date("2025-01-12"),
+    type: "success",
+  },
+]
+
+export const mockDonations: Donation[] = [
+  {
+    id: "1",
+    type: "money",
+    amount: 50000,
+    description: "Monetary donation for emergency relief operations",
+    donorName: "Juan dela Cruz",
+    missionId: "1",
+    receiptUrl: "/donation-receipt.jpg",
+    createdAt: new Date("2025-01-14"),
+    status: "verified",
+  },
+  {
+    id: "2",
+    type: "goods",
+    description: "100 packs of canned goods and instant noodles",
+    donorName: "Maria Santos",
+    missionId: "1",
+    receiptUrl: "/goods-receipt-photo.jpg",
+    createdAt: new Date("2025-01-13"),
+    status: "distributed",
+  },
+  {
+    id: "3",
+    type: "money",
+    amount: 25000,
+    description: "General fund donation",
+    donorName: "Anonymous",
+    receiptUrl: "/bank-transfer-receipt.png",
+    createdAt: new Date("2025-01-13"),
+    status: "verified",
+  },
+  {
+    id: "4",
+    type: "goods",
+    description: "Medical supplies: bandages, antiseptics, pain relievers",
+    donorName: "ABC Pharmacy",
+    missionId: "2",
+    receiptUrl: "/medical-supplies-photo.jpg",
+    createdAt: new Date("2025-01-12"),
+    status: "verified",
+  },
+  {
+    id: "5",
+    type: "money",
+    amount: 100000,
+    description: "Corporate donation for disaster relief",
+    donorName: "XYZ Corporation",
+    receiptUrl: "/corporate-donation-receipt.jpg",
+    createdAt: new Date("2025-01-11"),
+    status: "verified",
+  },
+]
