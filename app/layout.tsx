@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
+import 'leaflet/dist/leaflet.css';
 
 export const metadata: Metadata = {
   title: "ResQ - Disaster Relief Coordination Platform",

@@ -6,6 +6,7 @@ import { mockStatistics, mockMissions, mockUpdates } from "@/lib/mock-data"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import LazyMap from "@/components/LazyMap"
 
 export default function HomePage() {
   const topMissions = mockMissions.filter((m) => m.status !== "completed").slice(0, 5)
@@ -41,6 +42,18 @@ export default function HomePage() {
         <section>
           <StatsDashboard stats={mockStatistics} />
         </section>
+
+        {/* --- THIS IS THE NEW MAP SECTION WE ARE ADDING --- */}
+        <section className="space-y-6">
+          <div>
+            <h2 className="text-3xl font-bold mb-2">Live Operations Map</h2>
+            <p className="text-muted-foreground">View active missions and alerts in real-time across the region</p>
+          </div>
+          <div className="h-[500px] w-full rounded-lg border overflow-hidden">
+            <LazyMap />
+          </div>
+        </section>
+        {/* --- END OF NEW MAP SECTION --- */}
 
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-3 gap-8">
