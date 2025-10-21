@@ -50,7 +50,7 @@ export default function MissionsPage() {
             <p className="text-muted-foreground">Browse and join active disaster relief operations</p>
           </div>
           <Link href="/missions/create">
-            <Button className="bg-accent text-accent-foreground hover:bg-accent/90 gap-2">
+            <Button className="bg-[#ff4500] text-[#ff4500]-foreground hover:bg-[#ff4500]/90 gap-2">
               <Plus className="w-4 h-4" />
               Create Mission
             </Button>

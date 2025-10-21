@@ -122,7 +122,7 @@ export default function CreateMissionPage() {
             {/* Image Upload */}
             <div className="space-y-2">
               <Label htmlFor="image">Mission Photo (Optional)</Label>
-              <div className="border-2 border-dashed border-border rounded-lg p-8 text-center hover:border-accent/50 transition-colors cursor-pointer">
+              <div className="border-2 border-dashed border-border rounded-lg p-8 text-center hover:border-[#ff4500]/50 transition-colors cursor-pointer">
                 <Upload className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
                 <p className="text-sm text-muted-foreground mb-1">Click to upload or drag and drop</p>
                 <p className="text-xs text-muted-foreground">PNG, JPG up to 10MB</p>
@@ -141,8 +141,8 @@ export default function CreateMissionPage() {
           </div>
 
           {/* Transparency Notice */}
-          <div className="bg-accent/10 border border-accent/20 rounded-lg p-4">
-            <p className="text-sm text-accent font-medium mb-2">Transparency Commitment</p>
+          <div className="bg-[#ff4500]/10 border border-[#ff4500]/20 rounded-lg p-4">
+            <p className="text-sm text-[#ff4500] font-medium mb-2">Transparency Commitment</p>
             <p className="text-xs text-muted-foreground">
               By creating this mission, you commit to providing regular updates, photos, and receipts to maintain
               transparency with volunteers and donors. This builds trust in the ResQ community.
@@ -153,7 +153,7 @@ export default function CreateMissionPage() {
           <div className="flex gap-3">
             <Button
               type="submit"
-              className="flex-1 bg-accent text-accent-foreground hover:bg-accent/90"
+              className="flex-1 bg-[#ff4500] text-[#ff4500]-foreground hover:bg-[#ff4500]/90"
               size="lg"
               disabled={isSubmitting}
             >

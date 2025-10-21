@@ -16,12 +16,12 @@ export function MissionCard({ mission }: MissionCardProps) {
     food: "bg-chart-4/10 text-chart-4 border-chart-4/20",
     medical: "bg-destructive/10 text-destructive border-destructive/20",
     shelter: "bg-primary/10 text-primary border-primary/20",
-    rescue: "bg-accent/10 text-accent border-accent/20",
+    rescue: "bg-[#ff4500]/10 text-[#ff4500] border-[#ff4500]/20",
     supplies: "bg-chart-3/10 text-chart-3 border-chart-3/20",
   }
 
   return (
-    <div className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-all hover:shadow-lg h-full flex flex-col">
+    <div className="bg-card border border-border rounded-lg p-6 hover:border-[#ff4500]/50 transition-all hover:shadow-lg h-full flex flex-col">
       <div className="flex items-start justify-between mb-3">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-2">
@@ -60,7 +60,7 @@ export function MissionCard({ mission }: MissionCardProps) {
           </div>
           <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
             <div
-              className={`h-full transition-all ${isUrgent ? "bg-destructive" : "bg-accent"}`}
+              className={`h-full transition-all ${isUrgent ? "bg-destructive" : "bg-[#ff4500]"}`}
               style={{ width: `${Math.min(progress, 100)}%` }}
             />
           </div>

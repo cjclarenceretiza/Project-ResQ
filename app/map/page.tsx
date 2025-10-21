@@ -42,7 +42,7 @@ export default function MapPage() {
       case "completed":
         return "bg-muted"
       default:
-        return "bg-accent"
+        return "bg-[#ff4500]"
     }
   }
 
@@ -199,7 +199,7 @@ export default function MapPage() {
                     <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
                       <div
                         className={`h-full transition-all ${
-                          selectedMission.status === "urgent" ? "bg-destructive" : "bg-accent"
+                          selectedMission.status === "urgent" ? "bg-destructive" : "bg-[#ff4500]"
                         }`}
                         style={{
                           width: `${Math.min(
@@ -237,8 +237,8 @@ export default function MapPage() {
                     key={mission.id}
                     className={`w-full text-left p-3 rounded-lg border transition-colors ${
                       selectedMission?.id === mission.id
-                        ? "border-accent bg-accent/10"
-                        : "border-border hover:border-accent/50"
+                        ? "border-[#ff4500] bg-[#ff4500]/10"
+                        : "border-border hover:border-[#ff4500]/50"
                     }`}
                     onClick={() => setSelectedMission(mission)}
                   >

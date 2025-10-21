@@ -36,7 +36,7 @@ export function CommunityFeed({ updates }: CommunityFeedProps) {
           key={update.id}
           className={`bg-card border border-border border-l-4 ${getBorderColor(
             update.type,
-          )} rounded-lg p-5 hover:border-accent/50 transition-colors`}
+          )} rounded-lg p-5 hover:border-[#ff4500]/50 transition-colors`}
         >
           <div className="flex items-start gap-3">
             <div className="mt-0.5">{getIcon(update.type)}</div>

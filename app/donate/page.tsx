@@ -147,7 +147,7 @@ export default function DonatePage() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                    className="w-full bg-[#ff4500] text-[#ff4500]-foreground hover:bg-[#ff4500]/90"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Processing..." : "Proceed to Payment"}
@@ -252,7 +252,7 @@ export default function DonatePage() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                    className="w-full bg-[#ff4500] text-[#ff4500]-foreground hover:bg-[#ff4500]/90"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Submitting..." : "Submit Donation"}
@@ -280,7 +280,7 @@ export default function DonatePage() {
             {/* Transparency Info */}
             <div className="bg-card border border-border rounded-lg p-6">
               <h3 className="font-semibold mb-4 flex items-center gap-2">
-                <FileText className="w-5 h-5 text-accent" />
+                <FileText className="w-5 h-5 text-[#ff4500]" />
                 Full Transparency
               </h3>
               <div className="space-y-3 text-sm">
@@ -331,7 +331,7 @@ export default function DonatePage() {
                       </Badge>
                     </div>
                     {donation.type === "money" && donation.amount && (
-                      <p className="text-sm font-semibold text-accent">₱{donation.amount.toLocaleString()}</p>
+                      <p className="text-sm font-semibold text-[#ff4500]">₱{donation.amount.toLocaleString()}</p>
                     )}
                     <p className="text-xs text-muted-foreground">
                       {formatDistanceToNow(donation.createdAt, { addSuffix: true })}
@@ -342,7 +342,7 @@ export default function DonatePage() {
             </div>
 
             {/* Impact Stats */}
-            <div className="bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 rounded-lg p-6">
+            <div className="bg-gradient-to-br from-[#ff4500]/10 to-primary/10 border border-[#ff4500]/20 rounded-lg p-6">
               <h3 className="font-semibold mb-4">Your Impact</h3>
               <div className="space-y-3">
                 <div>
