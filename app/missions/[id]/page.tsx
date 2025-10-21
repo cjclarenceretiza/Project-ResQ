@@ -37,11 +37,11 @@ export default function MissionDetailPage() {
   const isCompleted = mission.status === "completed"
 
   const categoryColors = {
-    food: "bg-chart-4/10 text-chart-4 border-chart-4/20",
-    medical: "bg-destructive/10 text-destructive border-destructive/20",
-    shelter: "bg-primary/10 text-primary border-primary/20",
+    food: "bg-[#f49700]/10 text-[#f49700] border-[#f49700]/20",
+    medical: "bg-[#df000d]/10 text-[#df000d] border-[#df000d]/20",
+    shelter: "bg-[#0081f1]/10 text-[#0081f1] border-[#0081f1]/20",
     rescue: "bg-[#ff4500]/10 text-[#ff4500] border-[#ff4500]/20",
-    supplies: "bg-chart-3/10 text-chart-3 border-chart-3/20",
+    supplies: "bg-[#00af67]/10 text-[#00af67] border-[#00af67]/20",
   }
 
   const handleJoinMission = () => {
@@ -162,7 +162,7 @@ export default function MissionDetailPage() {
                   </div>
                   <div className="w-full bg-secondary rounded-full h-3 overflow-hidden">
                     <div
-                      className={`h-full transition-all ${isUrgent ? "bg-destructive" : "bg-[#ff4500]"}`}
+                      className={`h-full transition-all ${isUrgent ? "bg-[#df000d]" : "bg-[#ff4500]"}`}
                       style={{ width: `${Math.min(progress, 100)}%` }}
                     />
                   </div>
@@ -175,7 +175,7 @@ export default function MissionDetailPage() {
                 <div className="space-y-2 pt-2">
                   {!isCompleted && (
                     <Button
-                      className="w-full bg-primary hover:bg-primary/90"
+                      className="w-full bg-[#0081f1] hover:bg-[#0081f1]/90"
                       size="lg"
                       onClick={handleJoinMission}
                       disabled={hasJoined}

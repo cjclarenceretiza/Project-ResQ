@@ -10,22 +10,22 @@ export function CommunityFeed({ updates }: CommunityFeedProps) {
   const getIcon = (type: CommunityUpdate["type"]) => {
     switch (type) {
       case "urgent":
-        return <AlertCircle className="w-5 h-5 text-destructive" />
+        return <AlertCircle className="w-5 h-5 text-[#df000d]" />
       case "success":
-        return <CheckCircle className="w-5 h-5 text-chart-3" />
+        return <CheckCircle className="w-5 h-5 text-[#00af67]" />
       case "announcement":
-        return <Megaphone className="w-5 h-5 text-primary" />
+        return <Megaphone className="w-5 h-5 text-[#0081f1]" />
     }
   }
 
   const getBorderColor = (type: CommunityUpdate["type"]) => {
     switch (type) {
       case "urgent":
-        return "border-l-destructive"
+        return "border-l-[#df000d]"
       case "success":
-        return "border-l-chart-3"
+        return "border-l-[#00af67]"
       case "announcement":
-        return "border-l-primary"
+        return "border-l-[#0081f1]"
     }
   }
 

@@ -11,25 +11,25 @@ export function StatsDashboard({ stats }: StatsDashboardProps) {
       label: "Active Missions",
       value: stats.activeMissions,
       icon: Activity,
-      color: "text-accent",
+      color: "text-[#ff4500]",
     },
     {
       label: "People Helped",
       value: stats.peopleHelped.toLocaleString(),
       icon: Heart,
-      color: "text-primary",
+      color: "text-[#0081f1]",
     },
     {
       label: "Donations Received",
       value: stats.donationsReceived,
       icon: Package,
-      color: "text-chart-3",
+      color: "text-[#00af67]",
     },
     {
       label: "Active Volunteers",
       value: stats.volunteersActive,
       icon: Users,
-      color: "text-chart-4",
+      color: "text-[#f49700]",
     },
   ]
 
@@ -40,7 +40,7 @@ export function StatsDashboard({ stats }: StatsDashboardProps) {
         return (
           <div
             key={stat.label}
-            className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-colors"
+            className="bg-card border border-border rounded-lg p-6 hover:border-[#ff4500]/50 transition-colors"
           >
             <div className="flex items-start justify-between">
               <div>
