@@ -15,7 +15,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-[#ff4500] rounded-lg flex items-center justify-center">
-              <span className="text-[#ff4500]-foreground font-bold text-lg">R</span>
+              <span className="text-black font-bold text-lg">R</span>
             </div>
             <span className="font-bold text-xl">ResQ</span>
           </Link>
@@ -39,7 +39,7 @@ export function Navigation() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link href="/missions/create">
-              <Button className="bg-[#ff4500] text-[#ff4500]-foreground hover:bg-[#ff4500]/90">Create Mission</Button>
+              <Button className="bg-[#ff4500] text-black hover:bg-[#ff4500]/90">Create Mission</Button>
             </Link>
           </div>
 
