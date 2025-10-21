@@ -147,7 +147,7 @@ export default function DonatePage() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                    className="w-full bg-[#ff4500] text-[#ff4500]-foreground hover:bg-[#ff4500]/90"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Processing..." : "Proceed to Payment"}
@@ -252,7 +252,7 @@ export default function DonatePage() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                    className="w-full bg-[#ff4500] text-[#ff4500]-foreground hover:bg-[#ff4500]/90"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Submitting..." : "Submit Donation"}
@@ -263,10 +263,10 @@ export default function DonatePage() {
 
             {/* Success Message */}
             {showSuccess && (
-              <div className="bg-chart-3/10 border border-chart-3/20 rounded-lg p-4 flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-chart-3 mt-0.5" />
+              <div className="bg-[#00af67]/10 border border-[#00af67]/20 rounded-lg p-4 flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-[#00af67] mt-0.5" />
                 <div>
-                  <p className="font-medium text-chart-3 mb-1">Thank you for your donation!</p>
+                  <p className="font-medium text-[#00af67] mb-1">Thank you for your donation!</p>
                   <p className="text-sm text-muted-foreground">
                     Your contribution will make a real difference. You'll receive a receipt and updates via email.
                   </p>
@@ -280,7 +280,7 @@ export default function DonatePage() {
             {/* Transparency Info */}
             <div className="bg-card border border-border rounded-lg p-6">
               <h3 className="font-semibold mb-4 flex items-center gap-2">
-                <FileText className="w-5 h-5 text-accent" />
+                <FileText className="w-5 h-5 text-[#ff4500]" />
                 Full Transparency
               </h3>
               <div className="space-y-3 text-sm">
@@ -289,19 +289,19 @@ export default function DonatePage() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-chart-3" />
+                    <CheckCircle className="w-4 h-4 text-[#00af67]" />
                     <span>Official receipts provided</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-chart-3" />
+                    <CheckCircle className="w-4 h-4 text-[#00af67]" />
                     <span>Photo documentation</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-chart-3" />
+                    <CheckCircle className="w-4 h-4 text-[#00af67]" />
                     <span>Regular updates on usage</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-chart-3" />
+                    <CheckCircle className="w-4 h-4 text-[#00af67]" />
                     <span>LGU verified</span>
                   </div>
                 </div>
@@ -323,15 +323,15 @@ export default function DonatePage() {
                         variant="outline"
                         className={
                           donation.status === "verified"
-                            ? "bg-chart-3/10 text-chart-3 border-chart-3/20"
-                            : "bg-primary/10 text-primary border-primary/20"
+                            ? "bg-[#00af67]/10 text-[#00af67] border-[#00af67]/20"
+                            : "bg-[#0081f1]/10 text-[#0081f1] border-[#0081f1]/20"
                         }
                       >
                         {donation.status}
                       </Badge>
                     </div>
                     {donation.type === "money" && donation.amount && (
-                      <p className="text-sm font-semibold text-accent">₱{donation.amount.toLocaleString()}</p>
+                      <p className="text-sm font-semibold text-[#ff4500]">₱{donation.amount.toLocaleString()}</p>
                     )}
                     <p className="text-xs text-muted-foreground">
                       {formatDistanceToNow(donation.createdAt, { addSuffix: true })}
@@ -342,7 +342,7 @@ export default function DonatePage() {
             </div>
 
             {/* Impact Stats */}
-            <div className="bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20 rounded-lg p-6">
+            <div className="bg-gradient-to-br from-[#ff4500]/10 to-[#0081f1]/10 border border-[#ff4500]/20 rounded-lg p-6">
               <h3 className="font-semibold mb-4">Your Impact</h3>
               <div className="space-y-3">
                 <div>

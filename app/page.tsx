@@ -22,14 +22,14 @@ export default function HomePage() {
           <h1 className="text-5xl md:text-6xl font-bold text-balance leading-tight">
             Coordinate Relief.
             <br />
-            <span className="text-accent">Save Lives.</span>
+            <span className="text-[#ff4500]">Save Lives.</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Connect volunteers, donors, and communities to respond faster to disasters and emergencies across the
             Philippines.
           </p>
           <div className="flex items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button size="lg" className="bg-[#ff4500] text-[#ff4500]-foreground hover:bg-[#ff4500]/90">
               Join a Mission
             </Button>
             <Button size="lg" variant="outline">

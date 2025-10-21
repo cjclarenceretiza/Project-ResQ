@@ -36,13 +36,13 @@ export default function MapPage() {
   const getMarkerColor = (status: Mission["status"]) => {
     switch (status) {
       case "urgent":
-        return "bg-destructive"
+        return "bg-[#df000d]"
       case "active":
-        return "bg-primary"
+        return "bg-[#0081f1]"
       case "completed":
         return "bg-muted"
       default:
-        return "bg-accent"
+        return "bg-[#ff4500]"
     }
   }
 
@@ -134,11 +134,11 @@ export default function MapPage() {
                 <div className="absolute bottom-4 left-4 bg-card/95 backdrop-blur-sm border border-border rounded-lg p-4 space-y-2">
                   <p className="text-xs font-semibold mb-2">Legend</p>
                   <div className="flex items-center gap-2 text-xs">
-                    <div className="w-3 h-3 rounded-full bg-destructive" />
+                    <div className="w-3 h-3 rounded-full bg-[#df000d]" />
                     <span>Urgent</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs">
-                    <div className="w-3 h-3 rounded-full bg-primary" />
+                    <div className="w-3 h-3 rounded-full bg-[#0081f1]" />
                     <span>Active</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs">
@@ -199,7 +199,7 @@ export default function MapPage() {
                     <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
                       <div
                         className={`h-full transition-all ${
-                          selectedMission.status === "urgent" ? "bg-destructive" : "bg-accent"
+                          selectedMission.status === "urgent" ? "bg-[#df000d]" : "bg-[#ff4500]"
                         }`}
                         style={{
                           width: `${Math.min(
@@ -214,7 +214,7 @@ export default function MapPage() {
 
                 <div className="pt-2 space-y-2">
                   <Link href={`/missions/${selectedMission.id}`}>
-                    <Button className="w-full bg-primary hover:bg-primary/90">View Full Details</Button>
+                    <Button className="w-full bg-[#0081f1] hover:bg-[#0081f1]/90">View Full Details</Button>
                   </Link>
                   <Button variant="outline" className="w-full bg-transparent" onClick={() => setSelectedMission(null)}>
                     Close
@@ -237,8 +237,8 @@ export default function MapPage() {
                     key={mission.id}
                     className={`w-full text-left p-3 rounded-lg border transition-colors ${
                       selectedMission?.id === mission.id
-                        ? "border-accent bg-accent/10"
-                        : "border-border hover:border-accent/50"
+                        ? "border-[#ff4500] bg-[#ff4500]/10"
+                        : "border-border hover:border-[#ff4500]/50"
                     }`}
                     onClick={() => setSelectedMission(mission)}
                   >
