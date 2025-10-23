@@ -4,16 +4,29 @@ import { Navigation } from "@/components/navigation"
 import { mockMissions } from "@/lib/mock-data"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, Users, Calendar, AlertCircle, CheckCircle, ArrowLeft, Share2, ImageIcon } from "lucide-react"
+import { MapPin, Users, Calendar, AlertCircle, CheckCircle, ArrowLeft, Share2, ImageIcon, Lock } from "lucide-react"
 import Link from "next/link"
 import { formatDistanceToNow } from "date-fns"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useParams } from "next/navigation"
+import { getOrCreateDeviceId } from "@/lib/device-id"
+import { AdminPanel } from "@/components/admin-panel"
+import type { Mission } from "@/lib/types"
 
 export default function MissionDetailPage() {
   const params = useParams()
-  const mission = mockMissions.find((m) => m.id === params.id)
+  const [mission, setMission] = useState<Mission | null>(null)
   const [hasJoined, setHasJoined] = useState(false)
+  const [deviceId, setDeviceId] = useState("")
+  const [showAdminPanel, setShowAdminPanel] = useState(false)
+
+  useEffect(() => {
+    const id = getOrCreateDeviceId()
+    setDeviceId(id)
+
+    const foundMission = mockMissions.find((m) => m.id === params.id)
+    setMission(foundMission || null)
+  }, [params.id])
 
   if (!mission) {
     return (
@@ -35,6 +48,7 @@ export default function MissionDetailPage() {
   const progress = (mission.currentVolunteers / mission.peopleNeeded) * 100
   const isUrgent = mission.status === "urgent"
   const isCompleted = mission.status === "completed"
+  const isOrganizerDevice = mission.organizerDeviceId === deviceId
 
   const categoryColors = {
     food: "bg-[#f49700]/10 text-[#f49700] border-[#f49700]/20",
@@ -45,8 +59,19 @@ export default function MissionDetailPage() {
   }
 
   const handleJoinMission = () => {
-    setHasJoined(true)
-    // In a real app, this would make an API call
+    if (!hasJoined && !mission.volunteers.includes(deviceId)) {
+      const updatedMission = {
+        ...mission,
+        volunteers: [...mission.volunteers, deviceId],
+      }
+      setMission(updatedMission)
+      setHasJoined(true)
+    }
+  }
+
+  const handleUpdateMission = (updatedMission: Mission) => {
+    setMission(updatedMission)
+    setShowAdminPanel(false)
   }
 
   return (
@@ -194,6 +219,16 @@ export default function MissionDetailPage() {
                   </Button>
                 </div>
 
+                {/* Admin Panel Button */}
+                <Button
+                  onClick={() => setShowAdminPanel(true)}
+                  className="w-full gap-2 bg-[#ff4500]/20 text-[#ff4500] hover:bg-[#ff4500]/30 border border-[#ff4500]/30"
+                  variant="outline"
+                >
+                  <Lock className="w-4 h-4" />
+                  Manage Mission
+                </Button>
+
                 {hasJoined && (
                   <div className="bg-[#ff4500]/10 border border-[#ff4500]/20 rounded-lg p-4 mt-4">
                     <p className="text-sm text-[#ff4500] font-medium">
@@ -225,6 +260,17 @@ export default function MissionDetailPage() {
           </div>
         </div>
       </main>
+
+      {/* Admin Panel Modal */}
+      {showAdminPanel && (
+        <AdminPanel
+          mission={mission}
+          deviceId={deviceId}
+          onClose={() => setShowAdminPanel(false)}
+          onUpdateMission={handleUpdateMission}
+        />
+      )}
+
     </div>
   )
 }
