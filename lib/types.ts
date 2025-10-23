@@ -16,6 +16,9 @@ export interface Mission {
     lng: number
   }
   category: "food" | "medical" | "shelter" | "rescue" | "supplies"
+  organizerDeviceId: string
+  organizerPin: string
+  volunteers: string[] // Array of device IDs who joined
 }
 
 export interface Donation {

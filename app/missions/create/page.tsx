@@ -8,14 +8,31 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { ArrowLeft, Upload } from "lucide-react"
+import { ArrowLeft, Upload, Copy, Check } from "lucide-react"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import { getOrCreateDeviceId, generateMissionPin } from "@/lib/device-id"
 
 export default function CreateMissionPage() {
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [generatedPin, setGeneratedPin] = useState("")
+  const [deviceId, setDeviceId] = useState("")
+  const [pinCopied, setPinCopied] = useState(false)
+
+  useEffect(() => {
+    // Generate device ID and PIN on component mount
+    const id = getOrCreateDeviceId()
+    setDeviceId(id)
+    setGeneratedPin(generateMissionPin())
+  }, [])
+
+  const handleCopyPin = () => {
+    navigator.clipboard.writeText(generatedPin)
+    setPinCopied(true)
+    setTimeout(() => setPinCopied(false), 2000)
+  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -137,6 +154,40 @@ export default function CreateMissionPage() {
               <p className="text-xs text-muted-foreground">
                 Your organization will be publicly visible as the mission organizer
               </p>
+            </div>
+          </div>
+
+          <div className="bg-[#ff4500]/10 border border-[#ff4500]/20 rounded-lg p-6">
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <span className="w-6 h-6 bg-[#ff4500] text-[#ff4500]-foreground rounded-full flex items-center justify-center text-sm font-bold">
+                1
+              </span>
+              Your Organizer PIN
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Save this PIN to manage your mission from any device. You'll need it to mark the mission as complete or
+              make changes.
+            </p>
+            <div className="flex gap-2 items-end">
+              <div className="flex-1">
+                <Label htmlFor="pin" className="text-xs mb-2 block">
+                  PIN Code
+                </Label>
+                <Input id="pin" value={generatedPin} readOnly className="font-mono text-lg font-bold" />
+              </div>
+              <Button type="button" variant="outline" size="sm" onClick={handleCopyPin} className="bg-transparent">
+                {pinCopied ? (
+                  <>
+                    <Check className="w-4 h-4 mr-1" />
+                    Copied
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4 mr-1" />
+                    Copy
+                  </>
+                )}
+              </Button>
             </div>
           </div>
 
