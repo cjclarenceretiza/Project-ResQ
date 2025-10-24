@@ -49,12 +49,6 @@ export default function MissionsPage() {
             <h1 className="text-4xl font-bold mb-2">Relief Missions</h1>
             <p className="text-muted-foreground">Browse and join active disaster relief operations</p>
           </div>
-          <Link href="/missions/create">
-            <Button className="bg-[#ff4500] text-[#ff4500]-foreground hover:bg-[#ff4500]/90 gap-2">
-              <Plus className="w-4 h-4" />
-              Create Mission
-            </Button>
-          </Link>
         </div>
 
         {/* Search and Filters */}
