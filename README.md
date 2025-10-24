@@ -115,10 +115,10 @@ Vercel Deployment Documentation
 ## 👤 Team
 Project ResQ is currently maintained by:
 
-Kurt Pabalan
+Jesrelle Kurt Pabalan
 
 CJ Clarence Retiza
 
 Alexis Vince Antolihao
 
-Niño Gian Peleñio
+Niño Gian Lorenz Peleñio
