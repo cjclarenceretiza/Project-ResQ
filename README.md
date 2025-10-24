@@ -82,6 +82,8 @@ Then, open your browser and navigate to:
 
 The page will automatically update as you modify files inside the app/ directory.
 
+---
+
 ### 🤝 Contributing
 We welcome contributions from everyone! Whether you are a developer, designer, or technical writer, your help is invaluable in making ResQ a better platform.
 
@@ -97,6 +99,8 @@ Open a Pull Request.
 
 Please ensure your code adheres to the project's coding style and includes relevant tests.
 
+---
+
 ### 📝 Learn More
 To learn more about the tools we use, check out these resources:
 
@@ -106,12 +110,15 @@ Learn Next.js - An interactive Next.js tutorial.
 
 Vercel Deployment Documentation
 
+---
+
 ### 👤 Team
 Project ResQ is currently maintained by:
 
 Kurt Pabalan
-CJ Clarence Retiza
-Alexis Vince Antolihao
-Niño Gian Peleñio
 
-(Suggestion: Add other team members and their GitHub profiles here!)
+CJ Clarence Retiza
+
+Alexis Vince Antolihao
+
+Niño Gian Peleñio
