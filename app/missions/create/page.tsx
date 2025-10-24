@@ -160,9 +160,9 @@ export default function CreateMissionPage() {
           <div className="bg-[#ff4500]/10 border border-[#ff4500]/20 rounded-lg p-6">
             <h3 className="font-semibold mb-4 flex items-center gap-2">
               <span className="w-6 h-6 bg-[#ff4500] text-[#ff4500]-foreground rounded-full flex items-center justify-center text-sm font-bold">
-                1
+                !
               </span>
-              Your Organizer PIN
+               Organizer PIN
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
               Save this PIN to manage your mission from any device. You'll need it to mark the mission as complete or
