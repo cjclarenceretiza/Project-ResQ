@@ -84,7 +84,7 @@ The page will automatically update as you modify files inside the app/ directory
 
 ---
 
-### 🤝 Contributing
+## 🤝 Contributing
 We welcome contributions from everyone! Whether you are a developer, designer, or technical writer, your help is invaluable in making ResQ a better platform.
 
 Fork the repository.
@@ -101,7 +101,7 @@ Please ensure your code adheres to the project's coding style and includes relev
 
 ---
 
-### 📝 Learn More
+## 📝 Learn More
 To learn more about the tools we use, check out these resources:
 
 Next.js Documentation - Learn about Next.js features and API.
@@ -112,7 +112,7 @@ Vercel Deployment Documentation
 
 ---
 
-### 👤 Team
+## 👤 Team
 Project ResQ is currently maintained by:
 
 Kurt Pabalan
