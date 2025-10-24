@@ -10,7 +10,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 // --- We are now importing Leaflet components directly into the page ---
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, CircleMarker } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -60,6 +60,30 @@ export default function MapPage() {
       default: return "bg-[#ff4500]";
     }
   };
+  const getMapPathOptions = (status: Mission["status"]) => {
+    let color;
+    switch (status) {
+      case "urgent":
+        color = "#df000d"; // From your getMarkerColor function
+        break;
+      case "active":
+        color = "#0081f1"; // From your getMarkerColor function
+        break;
+      case "completed":
+        color = "#9ca3af"; // A gray color for "muted"
+        break;
+      default:
+        color = "#ff4500"; // From your getMarkerColor function
+    }
+
+    return {
+      fillColor: color,
+      color: "#ffffff", // White border
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 0.9,
+    };
+  };
 
   return (
     <div className="min-h-screen dark">
@@ -95,17 +119,19 @@ export default function MapPage() {
                 />
                 {filteredMissions.map((mission) => (
                   mission.coordinates && (
-                    <Marker
+                    <CircleMarker
                       key={mission.id}
-                      position={[mission.coordinates.lat, mission.coordinates.lng]}
+                      center={[mission.coordinates.lat, mission.coordinates.lng]}
+                      pathOptions={getMapPathOptions(mission.status)}
+                      radius={10} // You can change this number to make the circles bigger/smaller
                       eventHandlers={{
                         click: () => {
-                          setSelectedMission(mission); // We are now calling the function directly
+                          setSelectedMission(mission);
                         },
                       }}
                     >
                       <Popup>{mission.title}</Popup>
-                    </Marker>
+                    </CircleMarker>
                   )
                 ))}
               </MapContainer>

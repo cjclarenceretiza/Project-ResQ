@@ -22,7 +22,7 @@ export function Navigation() {
                 height={32}
               />
             <span className="font-bold text-xl">ResQ</span>
-          </Link>
+          </Link> 
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
