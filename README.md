@@ -87,15 +87,15 @@ The page will automatically update as you modify files inside the app/ directory
 ## 🤝 Contributing
 We welcome contributions from everyone! Whether you are a developer, designer, or technical writer, your help is invaluable in making ResQ a better platform.
 
-Fork the repository.
+1. Fork the repository.
 
-Create a new feature branch (git checkout -b feature/AmazingFeature).
+2. Create a new feature branch (git checkout -b feature/AmazingFeature).
 
-Commit your changes (git commit -m 'Add some AmazingFeature').
+3. Commit your changes (git commit -m 'Add some AmazingFeature').
 
-Push to the branch (git push origin feature/AmazingFeature).
+4. Push to the branch (git push origin feature/AmazingFeature).
 
-Open a Pull Request.
+5. Open a Pull Request.
 
 Please ensure your code adheres to the project's coding style and includes relevant tests.
 
@@ -104,21 +104,21 @@ Please ensure your code adheres to the project's coding style and includes relev
 ## 📝 Learn More
 To learn more about the tools we use, check out these resources:
 
-Next.js Documentation - Learn about Next.js features and API.
+• Next.js Documentation - Learn about Next.js features and API.
 
-Learn Next.js - An interactive Next.js tutorial.
+• Learn Next.js - An interactive Next.js tutorial.
 
-Vercel Deployment Documentation
+• Vercel Deployment Documentation
 
 ---
 
 ## 👤 Team
 Project ResQ is currently maintained by:
 
-Jesrelle Kurt Pabalan
+• Jesrelle Kurt Pabalan
 
-CJ Clarence Retiza
+• CJ Clarence Retiza
 
-Alexis Vince Antolihao
+• Alexis Vince Antolihao
 
-Niño Gian Lorenz Peleñio
+• Niño Gian Lorenz Peleñio
