@@ -27,7 +27,6 @@ Project ResQ is built with a modern, performant, and scalable technology stack:
 * **Styling:** Tailwind CSS (for rapid utility-first styling)
 * **Language:** TypeScript
 * **Database/Backend:** *(Please specify your backend/database here, e.g., Firebase, Supabase, or a custom API)*
-* **Hosting:** Vercel
 
 ---
 
@@ -107,8 +106,6 @@ To learn more about the tools we use, check out these resources:
 • Next.js Documentation - Learn about Next.js features and API.
 
 • Learn Next.js - An interactive Next.js tutorial.
-
-• Vercel Deployment Documentation
 
 ---
 
