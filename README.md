@@ -26,7 +26,7 @@ Project ResQ is built with a modern, performant, and scalable technology stack:
 * **Frontend:** [Next.js](https://nextjs.org/) (React Framework)
 * **Styling:** Tailwind CSS (for rapid utility-first styling)
 * **Language:** TypeScript
-* **Database/Backend:** *(Please specify your backend/database here, e.g., Firebase, Supabase, or a custom API)*
+* **Database/Backend:** Supabase
 
 ---
 
