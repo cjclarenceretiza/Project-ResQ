@@ -69,7 +69,7 @@ export function Navigation() {
               Map
             </Link>
             <Link href="/missions/create">
-              <Button className="w-full bg-[#ff4500] text-[#ff4500]-foreground hover:bg-[#ff4500]/90">Create Mission</Button>
+              <Button className="w-full bg-[#ff4500] text-black hover:bg-[#ff4500]/90">Create Mission</Button>
             </Link>
           </div>
         )}
