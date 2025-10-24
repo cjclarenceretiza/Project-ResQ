@@ -43,7 +43,7 @@ export function Navigation() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link href="/missions/create">
-              <Button className="bg-[#ff4500] text-black hover:bg-[#ff4500]/90">Create Mission</Button>
+              <Button className="bg-[#ff4500] text-white hover:bg-[#ff4500]/90">Create Mission</Button>
             </Link>
           </div>
 

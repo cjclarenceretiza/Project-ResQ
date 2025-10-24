@@ -31,7 +31,7 @@ export default function HomePage() {
           </p>
           <div className="flex items-center justify-center gap-4 pt-4">
             <Link href="/missions">
-              <Button size="lg" className="bg-[#ff4500] text-black hover:bg-[#ff4500]/90">
+              <Button size="lg" className="bg-[#ff4500] text-white hover:bg-[#ff4500]/90">
                 Join a Mission
               </Button>
             </Link>
