@@ -44,7 +44,7 @@ export default function DonatePage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Make a Difference Today</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto text-pretty">
             Your donation directly supports disaster relief efforts and helps communities in need across the Philippines
           </p>
         </div>
