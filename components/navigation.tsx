@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu } from "lucide-react"
 import { useState } from "react"
@@ -13,10 +14,13 @@ export function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-[#ff4500] rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-lg">R</span>
-            </div>
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                src="/Logo_Project-ResQ.png"
+                alt="Project-ResQ Logo"
+                width={32}
+                height={32}
+              />
             <span className="font-bold text-xl">ResQ</span>
           </Link>
 
