@@ -2,6 +2,7 @@ import type { Mission } from "@/lib/types"
 import { Button } from "@/components/ui/button"
 import { MapPin, Users, AlertCircle } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"  
 
 interface MissionCardProps {
   mission: Mission
@@ -69,14 +70,17 @@ export function MissionCard({ mission }: MissionCardProps) {
 
       <div className="flex items-center justify-between pt-3 border-t border-border">
         <span className="text-xs text-muted-foreground">by {mission.createdBy}</span>
-        <Button
-          size="sm"
-          variant={isCompleted ? "secondary" : "default"}
-          className={!isCompleted ? "bg-[#0081f1] hover:bg-[#0081f1]/90" : ""}
-          disabled={isCompleted}
-        >
-          {isCompleted ? "Completed" : "View Details"}
-        </Button>
+        {!isCompleted ? (
+          <Link href={`/missions/${mission.id}`}>
+            <Button size="sm" className="bg-[#0081f1] hover:bg-[#0081f1]/90">
+              View Details
+            </Button>
+          </Link>
+        ) : (
+          <Button size="sm" variant="secondary" disabled>
+            Completed
+          </Button>
+        )}
       </div>
     </div>
   )

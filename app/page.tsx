@@ -30,12 +30,16 @@ export default function HomePage() {
             Philippines.
           </p>
           <div className="flex items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="bg-[#ff4500] text-[#ff4500]-foreground hover:bg-[#ff4500]/90">
-              Join a Mission
-            </Button>
-            <Button size="lg" variant="outline">
-              Make a Donation
-            </Button>
+            <Link href="/missions">
+              <Button size="lg" className="bg-[#ff4500] text-[#ff4500]-foreground hover:bg-[#ff4500]/90">
+                Join a Mission
+              </Button>
+            </Link>
+            <Link href="/donate">
+              <Button size="lg" variant="outline">
+                Make a Donation
+              </Button>
+            </Link>
           </div>
         </section>
 
