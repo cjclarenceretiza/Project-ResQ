@@ -47,3 +47,16 @@ You will need the following installed:
 ```bash
 git clone [https://github.com/cjclarenceretiza/Project-ResQ.git](https://github.com/cjclarenceretiza/Project-ResQ.git)
 cd Project-ResQ
+
+### 2. Install Dependencies
+
+Use your preferred package manager to install all project dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
