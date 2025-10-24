@@ -102,29 +102,27 @@ export default function MissionsPage() {
         </div>
 
         {/* Missions Grid */}
-        {filteredMissions.length > 0 ? (
-          <div className="grid md:grid-cols-2 gap-6">
-            {filteredMissions.map((mission) => (
-              <Link key={mission.id} href={`/missions/${mission.id}`}>
-                <MissionCard mission={mission} />
-              </Link>
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground">No missions found matching your criteria.</p>
-            <Button
-              variant="link"
-              onClick={() => {
-                setSearchQuery("")
-                setSelectedStatus("all")
-                setSelectedCategory("all")
-              }}
-            >
-              Clear filters
-            </Button>
-          </div>
-        )}
+          {filteredMissions.length > 0 ? (
+            <div className="grid md:grid-cols-2 gap-6">
+              {filteredMissions.map((mission) => (
+                <MissionCard key={mission.id} mission={mission} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground">No missions found matching your criteria.</p>
+              <Button
+                variant="link"
+                onClick={() => {
+                  setSearchQuery("")
+                  setSelectedStatus("all")
+                  setSelectedCategory("all")
+                }}
+              >
+                Clear filters
+              </Button>
+            </div>
+          )}
       </main>
     </div>
   )
