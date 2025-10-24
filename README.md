@@ -47,6 +47,7 @@ You will need the following installed:
 ```bash
 git clone [https://github.com/cjclarenceretiza/Project-ResQ.git](https://github.com/cjclarenceretiza/Project-ResQ.git)
 cd Project-ResQ
+```
 
 ### 2. Install Dependencies
 
@@ -60,3 +61,23 @@ yarn install
 pnpm install
 # or
 bun install
+```
+
+### 3. Run the Development Server
+
+Start the application in development mode:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+Then, open your browser and navigate to:
+
+👉 http://localhost:3000
+
+The page will automatically update as you modify files inside the app/ directory.
