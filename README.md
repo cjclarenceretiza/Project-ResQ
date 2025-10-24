@@ -20,7 +20,7 @@ In the Philippines, where natural calamities are a constant challenge, ResQ empo
 ---
 
 ## 🛠️ Technology Stack
-
+ 
 Project ResQ is built with a modern, performant, and scalable technology stack:
 
 * **Frontend:** [Next.js](https://nextjs.org/) (React Framework)
